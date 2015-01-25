@@ -32,6 +32,13 @@ app.use(function(req, res, next) {
     next(err);
 });
 
+//login page
+app.get("/login", function(req, res) {
+  res.render("login", {
+    title: 'Login'
+  });
+});
+
 // error handlers
 
 // development error handler
