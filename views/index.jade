@@ -1,0 +1,65 @@
+extends layout
+block stylesheet
+	link(rel='stylesheet', href='../public/css/index.css')
+
+block content
+	//
+		script
+			window.fbAsyncInit = function() {
+				FB.init({
+					appId      : '1405183026445235',
+					xfbml      : true,
+					version    : 'v2.2',
+					status		 : true
+				});
+				FB.getLoginStatus(function(response) {
+					if (response.status != 'connected') {
+						window.location.replace("https://aqueous-fortress-3332.herokuapp.com/login");
+					}
+				});
+			};
+
+			(function(d, s, id){
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) {return;}
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/en_US/sdk.js";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+
+	nav
+		h3.mood Calm:
+		p.genre Acoustic
+			input.checkbox(type='checkbox', name='acoustic', value='Acoustic')
+		p.genre Classical
+			input.checkbox(type='checkbox', name='classical', value='Classical')
+
+		h3.mood Normal:
+		p.genre Alternative
+			input.checkbox(type='checkbox', name='alternative', value='Alternative')
+		p.genre Jazz
+			input.checkbox(type='checkbox', name='jazz', value='Jazz')
+		p.genre Pop
+			input.checkbox(type='checkbox', name='pop', value='Pop')
+		p.genre Rap
+			input.checkbox(type='checkbox', name='rap', value='Rap')
+		p.genre Rock
+			input.checkbox(type='checkbox', name='rock', value='Rock')
+
+		h3.mood Active:
+		p.genre Dubstep
+			input.checkbox(type='checkbox', name='dubstep', value='Dubstep')
+		p.genre EDM
+			input.checkbox(type='checkbox', name='edm', value='EDM')
+		p.genre Heavy rock
+			input.checkbox(type='checkbox', name='heavy rock', value='Heavy rock')
+		p.genre House
+			input.checkbox(type='checkbox', name='house', value='House')
+		p.genre Metal
+			input.checkbox(type='checkbox', name='metal', value='Metal')
+	.container
+		#content
+			h1 Waver
+			br
+			h3 It looks like you're feeling ___
+			//___ should be filled in with the mood

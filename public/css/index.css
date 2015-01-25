@@ -1,0 +1,38 @@
+nav {
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	background: black;
+	width: 10%;
+	padding: 1%;
+	color: #eee;
+	font-weight: lighter;
+	margin-top: -2%;
+}
+
+.mood {
+	margin-bottom: -2%;
+	margin-top: 20%;
+}
+
+.genre {
+	font-size: 18px;
+	margin-top: -1%;
+}
+
+.container {
+	margin-left: 23%;
+	margin-top: 3%;
+	width: 70%;
+	background-color: #eee;
+	padding: 
+}
+
+#content {
+	text-align: center;
+}
+
+h1 {
+	font-size: 72px;
+}
