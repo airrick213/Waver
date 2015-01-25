@@ -30,6 +30,5 @@ block content
 	.container
 		h1 Waver
 		br
-		//fb:login-button(scope="public_profile,email", onlogin="getLoginStatus();", redirect-url="https://aqueous-fortress-3332.herokuapp.com")
-		a(href="#" onclick="fb_login();")
-			img(src='../static/img/facebook_button.jpg')
+		a(href='https://aqueous-fortress-3332.herokuapp.com')
+			fb:login-button(scope="public_profile,email", onlogin="getLoginStatus();")
