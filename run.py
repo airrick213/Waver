@@ -1,6 +1,9 @@
 from config import app, render_template
 import jinja2
 import os
+import spotipy
+import sys
+import spotipy.util as util
 
 @app.route('/')
 def index():
