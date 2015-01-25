@@ -1,6 +1,6 @@
 extends layout
 block stylesheet
-	link(rel='stylesheet', href='/css/login.css')
+	link(rel='stylesheet', href='../static/css/login.css')
 
 block content
 	script
@@ -30,5 +30,4 @@ block content
 	.container
 		h1 Waver
 		br
-		a(href='https://aqueous-fortress-3332.herokuapp.com')
-			fb:login-button(scope="public_profile,email", onlogin="getLoginStatus();")
+		fb:login-button(id='login_button', scope="public_profile,email", onlogin="window.location.replace('https://aqueous-fortress-3332.herokuapp.com');")

@@ -1,0 +1,17 @@
+body {
+	background: url("../img/river-liffey.jpg") no-repeat;
+	background-size: 100%;
+}
+
+.container {
+	margin: 15% auto;
+	width: 20%;
+	text-align: center;
+	background-color: rgba(221, 255, 204, 0.8);
+	border-radius: 20px;
+	padding: 4% 3%;
+}
+
+h1 {
+	font-size: 72px;
+}
