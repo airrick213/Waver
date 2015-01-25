@@ -13,10 +13,7 @@ block content
 			});
 			FB.getLoginStatus(function(response) {
 				if (response.status === 'connected') {
-					//redirect to the main page
-				}
-				else {
-					FB.login();
+					window.location.replace("https://aqueous-fortress-3332.herokuapp.com"); 
 				}
 			});
 		};
