@@ -29,35 +29,44 @@ block content
 
 	nav
 		h3.mood Calm:
-		p.genre Acoustic
-			input.checkbox(type='checkbox', name='acoustic', value='Acoustic')
-		p.genre Classical
-			input.checkbox(type='checkbox', name='classical', value='Classical')
+		input.checkbox#acoustic(type='checkbox', name='acoustic', value='Acoustic')
+		label(for='acoustic') Acoustic
+		br
+		input.checkbox#classical(type='checkbox', name='classical', value='Classical')
+		label(for='classical') Classical
+
 
 		h3.mood Normal:
-		p.genre Alternative
-			input.checkbox(type='checkbox', name='alternative', value='Alternative')
-			label(for='checkbox')
-		p.genre Jazz
-			input.checkbox(type='checkbox', name='jazz', value='Jazz')
-		p.genre Pop
-			input.checkbox(type='checkbox', name='pop', value='Pop')
-		p.genre Rap
-			input.checkbox(type='checkbox', name='rap', value='Rap')
-		p.genre Rock
-			input.checkbox(type='checkbox', name='rock', value='Rock')
+		input.checkbox#alternative(type='checkbox', name='alternative', value='Alternative')
+		label(for='alternative') Alternative
+		br
+		input.checkbox#jazz(type='checkbox', name='jazz', value='Jazz')
+		label(for='jazz') Jazz
+		br
+		input.checkbox#pop(type='checkbox', name='pop', value='Pop')
+		label(for='pop') Pop
+		br
+		input.checkbox#rap(type='checkbox', name='rap', value='Rap')
+		label(for='rap') Rap
+		br
+		input.checkbox#rock(type='checkbox', name='rock', value='Rock')
+		label(for='rock') Rock
 
 		h3.mood Active:
-		p.genre Dubstep
-			input.checkbox(type='checkbox', name='dubstep', value='Dubstep')
-		p.genre EDM
-			input.checkbox(type='checkbox', name='edm', value='EDM')
-		p.genre Heavy rock
-			input.checkbox(type='checkbox', name='heavy rock', value='Heavy rock')
-		p.genre House
-			input.checkbox(type='checkbox', name='house', value='House')
-		p.genre Metal
-			input.checkbox(type='checkbox', name='metal', value='Metal')
+		input.checkbox#dubstep(type='checkbox', name='dubstep', value='Dubstep')
+		label(for='dubstep') Dubstep
+		br
+		input.checkbox#edm(type='checkbox', name='edm', value='EDM')
+		label(for='edm') EDM
+		br
+		input.checkbox#heavy_rock(type='checkbox', name='heavy rock', value='Heavy rock')
+		label(for='heavy_rock') Heavy rock
+		br
+		input.checkbox#house(type='checkbox', name='house', value='House')
+		label(for='house') House
+		br
+		input.checkbox#metal(type='checkbox', name='metal', value='Metal')
+		label(for='metal') Metal
 	.container
 		#content
 			h1 Waver
