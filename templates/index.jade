@@ -3,23 +3,48 @@ block stylesheet
 	link(rel='stylesheet', href='/css/index.css')
 
 block content
+	script
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '1405183026445235',
+				xfbml      : true,
+				version    : 'v2.2',
+				status		 : true
+			});
+			FB.getLoginStatus(function(response) {
+				if (response.status != 'connected') {
+					window.location.replace("https://aqueous-fortress-3332.herokuapp.com/login"); 
+				}
+			});
+		};
+
+		(function(d, s, id){
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+
+	#sidebar
+		h3 Calm Genres:
+			input(type='checkbox', name='genre', value='Acoustic')
+			input(type='checkbox', name='genre', value='Classical')
+
+		h3 Normal Genres:
+			input(type='checkbox', name='genre', value='Alternative')
+			input(type='checkbox', name='genre', value='Jazz')
+			input(type='checkbox', name='genre', value='Rap')
+			input(type='checkbox', name='genre', value='Rock')
+
+		h3 Active Genres:
+			input(type='checkbox', name='genre', value='Dubstep')
+			input(type='checkbox', name='genre', value='EDM')
+			input(type='checkbox', name='genre', value='Heavy rock')
+			input(type='checkbox', name='genre', value='House')
+			input(type='checkbox', name='genre', value='Metal')
 	.container
 		h1 Waver
-
-		#col1
-			h3 Calm Genres:
-				input(type='checkbox', name='genre', value='Acoustic')
-				input(type='checkbox', name='genre', value='Classical')
-
-			h3 Normal Genres:
-				input(type='checkbox', name='genre', value='Alternative')
-				input(type='checkbox', name='genre', value='Jazz')
-				input(type='checkbox', name='genre', value='Rap')
-				input(type='checkbox', name='genre', value='Rock')
-
-			h3 Active Genres:
-				input(type='checkbox', name='genre', value='Dubstep')
-				input(type='checkbox', name='genre', value='EDM')
-				input(type='checkbox', name='genre', value='Heavy rock')
-				input(type='checkbox', name='genre', value='House')
-				input(type='checkbox', name='genre', value='Metal')
+		br
+		h3 It looks like you're feeling ___
+		//___ should be filled in with the mood

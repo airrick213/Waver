@@ -4,35 +4,31 @@ block stylesheet
 
 block content
 	script
-    window.fbAsyncInit = function() {
-	    FB.init({
-	      appId      : '1405183026445235',
-	      xfbml      : true,
-	      version    : 'v2.2',
-	      status		 : true
-	    });
-	    FB.getLoginStatus(function(response) {
-			  if (response.status === 'connected') {
-			    console.log('Logged in.');
-			  }
-			  else {
-			    FB.login();
-  			}
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '1405183026445235',
+				xfbml      : true,
+				version    : 'v2.2',
+				status		 : true
 			});
-	  };
+			FB.getLoginStatus(function(response) {
+				if (response.status === 'connected') {
+					window.location.replace("https://aqueous-fortress-3332.herokuapp.com"); 
+				}
+			});
+		};
 
-	  (function(d, s, id){
-	    var js, fjs = d.getElementsByTagName(s)[0];
-	    if (d.getElementById(id)) {return;}
-	    js = d.createElement(s); js.id = id;
-	    js.src = "//connect.facebook.net/en_US/sdk.js";
-	    fjs.parentNode.insertBefore(js, fjs);
-	  }(document, 'script', 'facebook-jssdk'));
+		(function(d, s, id){
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
 
 
 	.container
 		h1 Waver
 		br
-		form(name='input')
-			a(href='')
-				img(src='../static/img/facebook_button.jpg')
+		//fb:login-button(scope="public_profile,email", onlogin="getLoginStatus();", redirect-url="https://aqueous-fortress-3332.herokuapp.com")
+		<a href="#" onclick="fb_login();"><img src='../static/img/facebook_button.jpg' border="0" alt=""></a>
