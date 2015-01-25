@@ -31,6 +31,6 @@ block content
 	.container
 		h1 Waver
 		br
-		button(type='button', onclick="spotipy.util.prompt_for_user_token(username, scope=None, client_id=None, client_secret=None, redirect_uri=None);") Log in with Spotify
+		button(type='button', id='login_button', onclick="spotipy.util.prompt_for_user_token(username, scope=None, client_id=None, client_secret=None, redirect_uri=None);") LOGIN
 
 		//fb:login-button(id='login_button', scope="public_profile,email", onlogin="window.location.replace('https://aqueous-fortress-3332.herokuapp.com');")

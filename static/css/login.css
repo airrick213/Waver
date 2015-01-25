@@ -15,3 +15,14 @@ body {
 h1 {
 	font-size: 72px;
 }
+
+#login_button {
+	background-color: #84bd00;
+	color: white;
+	font-size: 20px;
+	line-height: 1.2;
+	border-radius: 500px;
+	padding: 14px 35px 10px;
+	border-color: transparent;
+	letter-spacing: 1.2px;
+}
